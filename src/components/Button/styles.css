@@ -1,0 +1,10 @@
+.button {
+    font-size: inherit;
+    background-color: #61dafb;
+    height: 45px;
+    width: 120px;
+}
+
+.button:hover {
+    background-color: darkturquoise;
+}

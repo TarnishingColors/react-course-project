@@ -1,0 +1,8 @@
+.todo-list {
+    /*display: flex;*/
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 10px;
+}
