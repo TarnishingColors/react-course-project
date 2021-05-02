@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./styles.css";
+import Button from "../Button/Button"
 
 const initialState = {
     name: "",
@@ -46,9 +47,7 @@ const AddTask = ({addTask}) => {
                 />
             </div>
             <div className="add-task__submit-button">
-                <button type="submit" className="add-button">
-                    Add This Task
-                </button>
+                <Button type="submit" buttonText="Add This Task" />
             </div>
         </form>
     );

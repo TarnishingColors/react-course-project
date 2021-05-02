@@ -1,14 +1,10 @@
 import React from 'react';
 import "./styles.css"
 
-const Button = ({ id, completed, changeTaskStatus }) => {
-
-    let handleOnClick = () => {
-        console.log(`Task ${id} completed status = ${completed}`);
-    }
+const Button = ({ handleOnClick, buttonText }) => {
 
     return (
-        <button onClick={() => changeTaskStatus(id)} className="button">Change status</button>
+        <button onClick={handleOnClick} className="button">{buttonText}</button>
     );
 };
 
