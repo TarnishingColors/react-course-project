@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a257ed95-17d3-4c68-b91b-fc676360c6bb" name="Default Changelist" comment="add changes for hw3">
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddTask/addTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddTask/addTask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddTask/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddTask/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyTodoList/MyTodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyTodoList/MyTodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyTodoList/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyTodoList/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Task/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Task/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/addTask/addTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addTask/addTask.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/addTask/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/addTask/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,7 @@
       <workItem from="1618932533792" duration="8556000" />
       <workItem from="1619514755559" duration="1261000" />
       <workItem from="1619805904717" duration="2565000" />
-      <workItem from="1619971684708" duration="5234000" />
+      <workItem from="1619971684708" duration="9913000" />
     </task>
     <task id="LOCAL-00001" summary="add changes for hw3">
       <created>1618940023600</created>
@@ -106,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619808233389</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add aside with entering info">
+      <created>1619977189512</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619977189512</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add changes for hw3" />
     <MESSAGE value="add changeTaskStatus function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add changeTaskStatus function" />
+    <MESSAGE value="add aside with entering info" />
+    <option name="LAST_COMMIT_MESSAGE" value="add aside with entering info" />
   </component>
 </project>

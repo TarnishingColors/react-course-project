@@ -8,10 +8,22 @@ const MyTodoList = () => {
 
     let [tasks, setTasks] = useState(data);
 
-    let changeTaskStatus = (taskId) => {
+    const changeTaskStatus = (taskId) => {
         setTasks(
             tasks.map(task => task.id === taskId ? {...task, completed: !task.completed} : task)
         )
+    }
+
+    const addTask = (formData) => {
+        setTasks(
+            [...tasks, {
+                id: tasks.length + 1,
+                name: formData.name,
+                description: formData.description,
+                completed: false
+            }]
+        )
+        console.log(tasks)
     }
 
     return (
@@ -26,7 +38,7 @@ const MyTodoList = () => {
                 }
             </div>
             <aside className="app__addTask">
-                <AddTask />
+                <AddTask addTask={addTask}/>
             </aside>
         </div>
     );

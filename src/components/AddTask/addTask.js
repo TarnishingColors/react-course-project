@@ -6,7 +6,7 @@ const initialState = {
     description: ""
 }
 
-const AddTask = () => {
+const AddTask = ({addTask}) => {
 
     const [formData, setFormData] = useState(initialState);
 
@@ -14,10 +14,15 @@ const AddTask = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
+        addTask(formData);
+        setFormData(initialState);
+    }
 
     return (
-        <div className="add-task">
+        <form onSubmit={handleSubmit} className="add-task">
             <p>Add New Task Info</p>
             <div className="add-task__input-field">
                 <input
@@ -25,6 +30,7 @@ const AddTask = () => {
                     name="name"
                     placeholder="Enter Task Name"
                     onChange={handleChange}
+                    value={formData.name}
                     size={25}
                 />
             </div>
@@ -35,15 +41,16 @@ const AddTask = () => {
                     name="description"
                     placeholder="Enter Description"
                     onChange={handleChange}
+                    value={formData.description}
                     size={25}
                 />
             </div>
             <div className="add-task__submit-button">
-                <button className="add-button">
+                <button type="submit" className="add-button">
                     Add This Task
                 </button>
             </div>
-        </div>
+        </form>
     );
 };
 
