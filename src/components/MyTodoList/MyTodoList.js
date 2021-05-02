@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import data from "./data";
 import Task from "../Task/Task";
+import AddTask from "../AddTask/addTask";
 import "./styles.css"
 
 const MyTodoList = () => {
@@ -15,13 +16,18 @@ const MyTodoList = () => {
 
     return (
         <div className="todo-list">
-            {
-                tasks.map((task, key) => {
-                    return (
-                        <Task key={key} task={task} changeTaskStatus={changeTaskStatus} />
-                    )
-                })
-            }
+            <div className="todo-list-tasks">
+                {
+                    tasks.map((task, key) => {
+                        return (
+                            <Task key={key} task={task} changeTaskStatus={changeTaskStatus} />
+                        )
+                    })
+                }
+            </div>
+            <aside className="app__addTask">
+                <AddTask />
+            </aside>
         </div>
     );
 };
