@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a257ed95-17d3-4c68-b91b-fc676360c6bb" name="Default Changelist" comment="add changes for hw3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddTask/addTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddTask/addTask.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Task/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Task/Task.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,19 +46,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -87,7 +71,8 @@
       <workItem from="1618932533792" duration="8556000" />
       <workItem from="1619514755559" duration="1261000" />
       <workItem from="1619805904717" duration="2565000" />
-      <workItem from="1619971684708" duration="11063000" />
+      <workItem from="1619971684708" duration="11386000" />
+      <workItem from="1620122507515" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="add changes for hw3">
       <created>1618940023600</created>
@@ -117,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619984016475</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix Button component">
+      <created>1619985409783</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619985409783</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +132,7 @@
     <MESSAGE value="add changeTaskStatus function" />
     <MESSAGE value="add aside with entering info" />
     <MESSAGE value="add functionality to addTask" />
-    <option name="LAST_COMMIT_MESSAGE" value="add functionality to addTask" />
+    <MESSAGE value="fix Button component" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Button component" />
   </component>
 </project>
