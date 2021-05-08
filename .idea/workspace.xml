@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a257ed95-17d3-4c68-b91b-fc676360c6bb" name="Default Changelist" comment="add changes for hw3">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,7 @@
       <workItem from="1619805904717" duration="2565000" />
       <workItem from="1619971684708" duration="11386000" />
       <workItem from="1620122507515" duration="599000" />
-      <workItem from="1620494582446" duration="553000" />
+      <workItem from="1620494582446" duration="951000" />
     </task>
     <task id="LOCAL-00001" summary="add changes for hw3">
       <created>1618940023600</created>
@@ -118,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620495132354</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add .idea folder to gitignore file to hide it">
+      <created>1620495315395</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620495315395</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
