@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import data from "./data";
 import Task from "../Task/Task";
 import AddTask from "../AddTask/addTask";
-import "./styles.css"
+import "./styles.scss"
+import ThemeChanger from "../ThemeChanger/ThemeChanger";
 
 const MyTodoList = () => {
 
@@ -38,6 +39,7 @@ const MyTodoList = () => {
                 }
             </div>
             <aside className="app__addTask">
+                <ThemeChanger />
                 <AddTask addTask={addTask}/>
             </aside>
         </div>

@@ -1,0 +1,28 @@
+.add-task {
+  margin: 10px
+}
+
+.add-task__input-field {
+  display: flex;
+  flex-flow: row;
+  font-size: 30pt;
+  margin: 10px;
+}
+
+.add-task__submit-button {
+  padding: 10px;
+}
+
+input {
+  font-size: 14px;
+  padding: 5px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding-left: 10px;
+}

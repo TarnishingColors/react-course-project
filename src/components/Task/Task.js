@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from "../Button/Button";
-import "./styles.css"
+import "./styles.scss"
 
 const Task = ({ task, changeTaskStatus }) => {
     let { id, name, description, completed } = task;

@@ -1,0 +1,22 @@
+.task {
+  align-items: center;
+  border: solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  margin: 15px 5px;
+  padding: 7px;
+  width: 300px;
+
+  &.red {
+    background-color: #ee9393;
+  }
+  &.green {
+    background-color: aquamarine;
+  }
+
+  .task__name {
+    font-weight: bold;
+  }
+}
