@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import "./styles.scss";
 import Button from "../Button/Button"
+import { AppContext } from "../../context";
 
 const initialState = {
     name: "",
@@ -8,6 +9,8 @@ const initialState = {
 }
 
 const AddTask = ({addTask}) => {
+
+  const { theme } = useContext(AppContext);
 
     const [formData, setFormData] = useState(initialState);
 
@@ -24,7 +27,7 @@ const AddTask = ({addTask}) => {
 
     return (
         <form onSubmit={handleSubmit} className="add-task">
-            <p>Add New Task Info</p>
+            <p className={`${theme}`}>Add New Task Info</p>
             <div className="add-task__input-field">
                 <input
                     type="text"

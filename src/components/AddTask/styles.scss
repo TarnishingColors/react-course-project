@@ -25,4 +25,10 @@ p {
   font-weight: bold;
   margin: 0;
   padding-left: 10px;
+  &.light {
+    color: #111111;
+  }
+  &.night {
+    color: whitesmoke;
+  }
 }
