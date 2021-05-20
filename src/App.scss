@@ -1,4 +1,11 @@
 .app {
   display: flex;
   flex-flow: row;
+  min-height: 100vh;
+  &.light {
+    background-color: azure;
+  }
+  &.night{
+    background: url("images/Wavey-Fingerprint.svg");
+  }
 }

@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./styles.scss";
 import { HiSun } from "react-icons/hi";
 import { BsMoon } from "react-icons/all";
+import { AppContext } from "../../context";
 
 const ThemeChanger = () => {
 
+    const { theme, setTheme } = useContext(AppContext);
+
     const clickHandler = () => {
+        if (theme === "light") {
+            setTheme("night");
+        } else {
+            setTheme("light");
+        }
     }
 
     return (

@@ -1,6 +1,5 @@
 .task {
   align-items: center;
-  border: solid;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -13,10 +12,23 @@
     background-color: #ee9393;
   }
   &.green {
-    background-color: aquamarine;
+    background-color: #34e2a9;
+  }
+
+  &.light {
+    border: solid #111111;
+    color: #111111;
+  }
+  &.night {
+    border: solid whitesmoke;
+    color: whitesmoke;
   }
 
   .task__name {
     font-weight: bold;
   }
+}
+
+.task__description {
+  margin: 5px;
 }

@@ -5,9 +5,10 @@
 
 .todo-list-tasks {
   display: grid;
-  align-items: center;
-  justify-items: center;
+  align-items: start;
+  //justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(30px, 0.22fr));
   margin: 10px;
   width: 70vw;
 }

@@ -24,7 +24,6 @@ const MyTodoList = () => {
                 completed: false
             }]
         )
-        console.log(tasks)
     }
 
     return (
