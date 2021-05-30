@@ -8,7 +8,7 @@ const initialState = {
     description: ""
 }
 
-const AddTask = ({addTask}) => {
+const AddTask = ({ addTask, projectId }) => {
 
   const { theme } = useContext(AppContext);
 
@@ -21,7 +21,7 @@ const AddTask = ({addTask}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        addTask(formData);
+        addTask(formData, projectId);
         setFormData(initialState);
     }
 
