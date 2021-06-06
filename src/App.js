@@ -1,48 +1,18 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect, useParams } from 'react-router-dom';
-import { AppContext } from "./context";
 
 import MyTodoList from "./components/MyTodoList/MyTodoList";
 import MyProjectsList from "./components/MyProjectsList/MyProjectsList";
-import projectsntasks from "./projectsntasks";
 import "./App.scss";
-import ThemeChanger from "./components/ThemeChanger/ThemeChanger";
-
-
-const normalizeState = (projectsntasks) => {
-    let normalizedState = {};
-
-    normalizedState.projectsById = projectsntasks.reduce((projects, item) => {
-        projects[item.id] = {
-            id: item.id,
-            name: item.name,
-            tasksIds: item.tasks.map((task) => task.id),
-        };
-        return projects;
-    }, {});
-
-    normalizedState.tasksById = projectsntasks
-        .reduce((projects, item) => {
-            projects = [...projects, ...item.tasks];
-            return projects;
-        }, [])
-        .reduce((tasks, item) => {
-            tasks[item.id] = item;
-            return tasks;
-        }, {});
-
-    return normalizedState;
-};
-
+import {useSelector} from "react-redux";
 
 function App() {
 
-  const [theme, setTheme] = useState("light");
+  const { theme } = useSelector(state => state.theme);
 
-  const [projects, setProjects] = useState(normalizeState(projectsntasks));
-  console.log(projects);
+  const projects = useSelector(state => state.projectsntasks);
 
-  const addTask = (formData, projectId) => {
+  /*const addTask = (formData, projectId) => {
       const index = Object.entries(projects.tasksById).length
       setProjects({
           projectsById: {
@@ -78,11 +48,10 @@ function App() {
               }
           }
       })
-    }
+    }*/
 
   return (
       <container className={`app ${theme}`}>
-          <AppContext.Provider value={{ theme, setTheme }}>
               <div className="app__main">
                   <Router>
                       <Switch>
@@ -95,15 +64,12 @@ function App() {
                               <MyTodoList
                                   tasks={Object.values(projects.tasksById)}
                                   projects={Object.values(projects.projectsById)}
-                                  addTask={addTask}
-                                  changeTaskStatus={changeTaskStatus}
                               />
                           </Route>
                           <Redirect to="/" />
                       </Switch>
                   </Router>
               </div>
-          </AppContext.Provider>
       </container>
   );
 }

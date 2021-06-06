@@ -1,15 +1,18 @@
 import React, {useContext} from 'react';
 import Button from "../Button/Button";
-import "./styles.scss"
-import { AppContext } from "../../context";
+import "./styles.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { changeTaskStatus } from "../../actions/projectsntasks";
 
-const Task = ({ task, changeTaskStatus }) => {
+const Task = ({ task }) => {
     let { id, name, description, completed } = task;
 
-    const { theme } = useContext(AppContext);
+    const { theme } = useSelector(state => state.theme);
+
+    const dispatch = useDispatch();
     
     const handleOnClick = () => {
-        changeTaskStatus(id);
+        dispatch(changeTaskStatus(id));
     }
 
     return (

@@ -1,18 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import "./styles.scss";
 import { HiSun } from "react-icons/hi";
 import { BsMoon } from "react-icons/all";
-import { AppContext } from "../../context";
+import { useDispatch, useSelector } from 'react-redux';
+import { changeToLightTheme, changeToNightTheme } from "../../actions/changeTheme";
 
 const ThemeChanger = () => {
+    const dispatch = useDispatch();
 
-    const { theme, setTheme } = useContext(AppContext);
+    const { theme } = useSelector(state => state.theme);
 
     const clickHandler = () => {
         if (theme === "light") {
-            setTheme("night");
+            dispatch(changeToNightTheme());
         } else {
-            setTheme("light");
+            dispatch(changeToLightTheme());
         }
     }
 
