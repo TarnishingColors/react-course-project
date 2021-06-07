@@ -1,0 +1,22 @@
+.project-list {
+  display: flex;
+  flex-flow: row;
+}
+
+.project-list__projects {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(30px, 0.22fr));
+  margin: 10px;
+  width: 70vw;
+}
+
+.project-list__add-project {
+  align-items: center;
+  background-color: inherit;
+  display: flex;
+  flex-flow: column;
+  height: inherit;
+  width: 30vw;
+}

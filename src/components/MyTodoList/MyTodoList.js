@@ -1,44 +1,39 @@
 import React, { useState } from 'react';
-import data from "./data";
 import Task from "../Task/Task";
+import "./styles.scss"
+import {Link, useParams} from "react-router-dom";
 import AddTask from "../AddTask/addTask";
-import "./styles.css"
+import Button from "../Button/Button";
 
-const MyTodoList = () => {
+const MyTodoList = ({ tasks, projects, addTask, changeTaskStatus }) => {
 
-    let [tasks, setTasks] = useState(data);
 
-    const changeTaskStatus = (taskId) => {
-        setTasks(
-            tasks.map(task => task.id === taskId ? {...task, completed: !task.completed} : task)
-        )
-    }
+    let { id } = useParams();
+    let taskIds;
+    projects.forEach(p => {
+        if (p.id == id) {
+            taskIds = p.tasksIds;
+        }
+    });
 
-    const addTask = (formData) => {
-        setTasks(
-            [...tasks, {
-                id: tasks.length + 1,
-                name: formData.name,
-                description: formData.description,
-                completed: false
-            }]
-        )
-        console.log(tasks)
-    }
+    let tasksList = tasks.filter((task) => taskIds.includes(task.id));
 
     return (
         <div className="todo-list">
-            <div className="todo-list-tasks">
+            <div className="todo-list__tasks">
                 {
-                    tasks.map((task, key) => {
+                    tasksList.map((task, key) => {
                         return (
                             <Task key={key} task={task} changeTaskStatus={changeTaskStatus} />
                         )
                     })
                 }
             </div>
-            <aside className="app__addTask">
-                <AddTask addTask={addTask}/>
+            <aside className="todo-list__addTask">
+                <AddTask addTask={addTask} projectId={id}/>
+                <Link to="/" className="todo-list__addTask__go-home">
+                    <Button buttonText="Back To Home" />
+                </Link>
             </aside>
         </div>
     );

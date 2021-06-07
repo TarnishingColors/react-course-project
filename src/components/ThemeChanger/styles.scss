@@ -1,0 +1,42 @@
+.theme-changer {
+  margin: 15px;
+}
+
+.label {
+  align-items: center;
+  background-color:  black;
+  display: flex;
+  border-radius: 50px;
+  justify-content: space-between;
+  height: 24px;
+  padding: 5px;
+  position: relative;
+  width: 50px;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.ball {
+  background-color: white;
+  border-radius: 50%;
+  left: 5.5px;
+  height: 25px;
+  position: absolute;
+  top: 4px;
+  transition: transform 0.2s linear;
+  width: 25px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+  &:checked + .label .ball {
+    transform: translateX(24px);
+  }
+}

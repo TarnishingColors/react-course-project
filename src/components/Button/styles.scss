@@ -1,0 +1,9 @@
+.button {
+  font-size: inherit;
+  background-color: #61dafb;
+  height: 45px;
+  width: 150px;
+  &:hover {
+    background-color: darkturquoise;
+  }
+}
