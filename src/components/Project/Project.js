@@ -1,12 +1,12 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import "./styles.scss"
-import { AppContext } from "../../context";
+import "./styles.scss";
+import { useSelector } from "react-redux";
 
 const Project = ({ project }) => {
     let { id, name } = project;
 
-    const { theme } = useContext(AppContext);
+    const { theme } = useSelector(state => state.theme);
 
     return (
         <Link to={`/project/${id}`} className={`project ${theme}`}>

@@ -1,18 +1,20 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import "./styles.scss";
 import Button from "../Button/Button"
-import { AppContext } from "../../context";
+import { useDispatch, useSelector } from "react-redux";
+import { addTask } from "../../actions/projectsntasks";
 
 const initialState = {
     name: "",
     description: ""
 }
 
-const AddTask = ({ addTask, projectId }) => {
+const AddTask = ({ projectId }) => {
 
-  const { theme } = useContext(AppContext);
+  const { theme } = useSelector(state => state.theme);
 
     const [formData, setFormData] = useState(initialState);
+    const dispatch = useDispatch();
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,7 +23,7 @@ const AddTask = ({ addTask, projectId }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        addTask(formData, projectId);
+        dispatch(addTask(formData, projectId));
         setFormData(initialState);
     }
 
